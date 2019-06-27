@@ -1,0 +1,15 @@
+{
+	"name": "Google Analytics Extension",
+	"version": "1.0",
+	"description": "Adding Google Analytics on web page",
+	"permissions": ["tabs", "http://*/*", "https://*/*", "webNavigation", "tabs"],
+
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": ["<all_urls>"],
+			"js": ["js/process.js"]
+		}
+	],
+	"manifest_version": 2
+}
